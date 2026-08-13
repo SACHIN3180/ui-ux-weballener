@@ -49,79 +49,39 @@ export default function Navbar() {
             <NavLink
               to="/"
               className="
-                flex
-                items-center
-                gap-3
-                group
-
-                animate-[fadeIn_0.8s_ease-out]
-              "
-            >
-
-              {/* Logo box */}
-
-              <div
-                className="
-    relative
-    w-12
-    h-12
     flex
     items-center
-    justify-center
-    transition-all
-    duration-500
-    group-hover:scale-110
+    group
+    animate-[fadeIn_0.8s_ease-out]
   "
+            >
+              {/* Logo */}
+              <div
+                className="
+      relative
+      w-40
+      h-16
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-500
+      group-hover:scale-110
+    "
               >
                 <img
                   src={allerLogo}
                   alt="Aller Technologies"
                   className="
-      w-full
-      h-full
-      object-contain
-      transition-all
-      duration-500
-      group-hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]
-    "
+        w-full
+        h-full
+        object-contain
+        transition-all
+        duration-500
+        group-hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]
+      "
                 />
               </div>
-
-
-              {/* Company name */}
-
-              <div
-                className="
-                  transition-all
-                  duration-500
-
-                  group-hover:translate-x-1
-                "
-              >
-
-                <h1
-                  className="
-                    text-white
-                    text-xl
-                    font-bold
-                    tracking-wide
-                  "
-                >
-                  ALLER
-                </h1>
-
-                <p
-                  className="
-                    text-cyan-400
-                    text-[9px]
-                    tracking-[0.3em]
-                  "
-                >
-                  TECHNOLOGIES
-                </p>
-
-              </div>
-
             </NavLink>
 
 
@@ -242,70 +202,49 @@ export default function Navbar() {
             {/* LET'S TALK */}
             {/* ================================================= */}
 
-            <NavLink
-              to="/contact"
-
+            <button
+              onClick={() => {
+                window.dispatchEvent(new Event("open-chatbot"));
+              }}
               className="
-                hidden
-                md:flex
-
-                relative
-                overflow-hidden
-
-                items-center
-                gap-2
-
-                px-6
-                py-3
-
-                rounded-full
-
-                border
-                border-cyan-400/40
-
-                bg-cyan-400/5
-
-                text-cyan-400
-
-                text-sm
-                font-semibold
-
-                transition-all
-                duration-300
-
-                hover:bg-cyan-400
-                hover:text-black
-
-                hover:-translate-y-1
-
-                hover:shadow-lg
-                hover:shadow-cyan-400/40
-
-                group
-              "
+    hidden
+    md:flex
+    relative
+    overflow-hidden
+    items-center
+    gap-2
+    px-6
+    py-3
+    rounded-full
+    border
+    border-cyan-400/40
+    bg-cyan-400/5
+    text-cyan-400
+    text-sm
+    font-semibold
+    transition-all
+    duration-300
+    hover:bg-cyan-400
+    hover:text-black
+    hover:-translate-y-1
+    hover:shadow-lg
+    hover:shadow-cyan-400/40
+    group
+  "
             >
-
-              {/* Moving shine */}
-
               <span
                 className="
-                  absolute
-
-                  top-0
-                  -left-20
-
-                  w-10
-                  h-full
-
-                  bg-white/30
-
-                  skew-x-[-20deg]
-
-                  group-hover:left-[120%]
-
-                  transition-all
-                  duration-700
-                "
+      absolute
+      top-0
+      -left-20
+      w-10
+      h-full
+      bg-white/30
+      skew-x-[-20deg]
+      group-hover:left-[120%]
+      transition-all
+      duration-700
+    "
               />
 
               <span className="relative z-10">
@@ -314,19 +253,16 @@ export default function Navbar() {
 
               <span
                 className="
-                  relative
-                  z-10
-
-                  transition-transform
-                  duration-300
-
-                  group-hover:translate-x-1
-                "
+      relative
+      z-10
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
               >
                 →
               </span>
-
-            </NavLink>
+            </button>
 
 
             {/* ================================================= */}
@@ -521,7 +457,7 @@ export default function Navbar() {
               {/* Mobile CTA */}
 
               <NavLink
-                to="/contact"
+                to="/chatbot"
 
                 onClick={() => setMenuOpen(false)}
 

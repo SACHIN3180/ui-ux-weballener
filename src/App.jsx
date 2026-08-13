@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import CustomCursor from "./components/CustomCursour";
 import Portfolio from "./pages/Portfolio";
+import ChatBot from "./components/ChatBot";
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
         <Route path="/services" element={<Services />} />        
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-      </Routes>
+      </Routes> 
+<ChatBot/>
+     
     </BrowserRouter>
   );
 }
