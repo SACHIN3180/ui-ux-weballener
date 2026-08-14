@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import CustomCursor from "./components/CustomCursour";
 import Portfolio from "./pages/Portfolio";
 import ChatBot from "./components/ChatBot";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes> 
 <ChatBot/>
+<WhatsAppButton/>
      
     </BrowserRouter>
   );
