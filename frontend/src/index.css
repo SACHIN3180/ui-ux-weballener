@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Interactive Logo CSS */
+@keyframes logoShake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-2px, 1px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(1px, 2px) rotate(1deg);
+  }
+}
+
+/* =========================================
+   SERVICES HERO ANIMATIONS
+========================================= */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(250%);
+    opacity: 0;
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* Floating service labels */
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+
+/* Scroll indicator */
+
+.animate-scroll-line {
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+
+/* Reverse rotating ring */
+
+.animate-spin-reverse {
+  animation: spinReverse 18s linear infinite;
+}
